@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Delete Post</title>
+</head>
+<body>
+
+  <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+    <div class="posts">
+        <h3 class="conte">id :<%= post.id %></h3>
+        <h4 class="user">@<%= post.username %></h4>
+        <textarea id="text" class="content" name="content"><%= post.content %></textarea> <br>
+        <button class="btn">Delete</button>
+       </div>
+    </form>
+</body>
+</html>
